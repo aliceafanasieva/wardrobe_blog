@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "Inter";
+    font-weight: 300;
+    src: url("/assets/fonts/Inter-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+    font-family: "Inter-Bold";
+    src: url("/assets/fonts/Inter_18pt-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Cursive";
+    src: url("/assets/fonts/Ballet-Regular-VariableFont_opsz.ttf")
+}
+
+:root {
+    --regular-font: "Inter";
+    --cursive-font: "Cursive";
+    --bold-font: "Inter-Bold";
+    --color-bg: rgb(255, 255, 255);
+    --color-fg: rgb(0, 0, 0);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: rgb(255, 255, 255);
+        --color-fg: rgb(0, 0, 0);  
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+    width: 100%;
+}
+
+html {
+    font-family: var(--regular-font);
+}
+
+h1, h2, h3, p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    list-style: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem; 
+    justify-content: left;
+}
+
+header .logo {
+    width: 4rem;
+    height: auto;
+}
+
+header h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0.5rem;
+    padding-left: 2rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0rem 1rem;
+}
+
+.navigation-logo {
+    visibility: hidden;
+}
+
+.navigation-menu {
+    align-items: center;
+    gap: 6rem;
+    padding-right: 3rem;
+}
+
+.btn-theme-change {
+    position: fixed;
+    background-color: var(--color-fg);
+    border: none;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    box-shadow: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  
+.btn-theme-change:hover {
+    background-color: #bababa;
+}
+  
+.btn-theme-change:active {
+    background-color:#7c7c7c
+}
+
+.landing-page {
+    padding: 2em;
+}
+
+img {
+    width: 100%;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 5vw, 4rem);
+    box-sizing: border-box;
+    padding: 5rem 1rem 15rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-logo {
+    max-width: 23rem;
+    min-width: 10rem;
+    height: auto;
+}
+
+.hero h1 {
+    font-size: clamp(5rem, 15.5vw, 10rem);
+    text-align: left;
+    padding-left: 0;
+}
+
+.grid-container {
+    display: grid;
+    padding: 0 4rem;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto auto;
+    gap: 4rem;
+    align-items: center;
+}
+  
+.grid-item {
+    width: 100%;
+    font-family: sans-serif;
+    color: var(--color-fg);
+}
+  
+.grid-item.text {
+    max-width: 90%;
+}
+  
+.grid-item.gif {
+    height: auto;
+    display: flex;
+}
